@@ -1,8 +1,4 @@
-﻿
-
-
-using IBM.Watson.DeveloperCloud.Utilities;
-/**
+﻿/**
 * Copyright 2015 IBM Corp. All Rights Reserved.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,8 +14,6 @@ using IBM.Watson.DeveloperCloud.Utilities;
 * limitations under the License.
 *
 */
-using System;
-using System.Collections.Generic;
 
 namespace IBM.Watson.DeveloperCloud.Services
 {
@@ -46,36 +40,5 @@ namespace IBM.Watson.DeveloperCloud.Services
     /// </summary>
     /// <param name="callback">The callback to invoke.</param>
     void GetServiceStatus(ServiceStatus callback);
-  }
-
-  /// <summary>
-  /// Service helper class.
-  /// </summary>
-  public static class ServiceHelper
-  {
-    /// <summary>
-    /// This returns a instance of all services.
-    /// </summary>
-    /// <returns>An array of IWatsonService instances.</returns>
-    public static IWatsonService[] GetAllServices(bool reqCredentials = false)
-    {
-      List<IWatsonService> services = new List<IWatsonService>();
-
-      Type[] types = Utilities.Utility.FindAllDerivedTypes(typeof(IWatsonService));
-      foreach (var type in types)
-      {
-        try
-        {
-          IWatsonService serviceObject = Activator.CreateInstance(type) as IWatsonService;
-          if (reqCredentials && Config.Instance.FindCredentials(serviceObject.GetServiceID()) == null)
-            continue;       // skip services that don't have credential data..
-          services.Add(serviceObject as IWatsonService);
-        }
-        catch (Exception)
-        { }
-      }
-
-      return services.ToArray();
-    }
   }
 }
