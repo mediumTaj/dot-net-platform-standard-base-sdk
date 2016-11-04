@@ -36,11 +36,89 @@
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <None Include="project.json" />
+    <None Include="tajTemp\third-party\FullSerializer\LICENSE.md" />
+    <None Include="tajTemp\third-party\FullSerializer\LIMITATIONS.md" />
+    <None Include="tajTemp\third-party\FullSerializer\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlchemyAPI\AlchemyAPI.cs" />
+    <Compile Include="AlchemyAPI\DataModels.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="IWatsonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tajTemp\connection\RESTConnector.cs" />
+    <Compile Include="tajTemp\connection\RESTConnector_unity.cs" />
+    <Compile Include="tajTemp\connection\WSConnector.cs" />
+    <Compile Include="tajTemp\logging\FileReactor.cs" />
+    <Compile Include="tajTemp\logging\ILogReactor.cs" />
+    <Compile Include="tajTemp\logging\Logger.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsArrayConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsDateConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsDictionaryConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsEnumConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsForwardConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsGuidConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsIEnumerableConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsKeyValuePairConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsNullableConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsPrimitiveConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsReflectedConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsTypeConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\fsWeakReferenceConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\Unity\AnimationCurve_DirectConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\Unity\Bounds_DirectConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\Unity\Gradient_DirectConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\Unity\Keyframe_DirectConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\Unity\LayerMask_DirectConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Converters\Unity\Rect_DirectConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Editor\AotHelpers.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsAotCompilationManager.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsBaseConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsConfig.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsContext.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsConverterRegistrar.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsData.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsDirectConverter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsExceptions.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsIgnoreAttribute.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsISerializationCallbacks.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsJsonParser.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsJsonPrinter.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsMemberSerialization.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsObjectAttribute.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsObjectProcessor.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsPropertyAttribute.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsResult.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\fsSerializer.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Internal\fsCyclicReferenceManager.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Internal\fsOption.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Internal\fsPortableReflection.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Internal\fsTypeExtensions.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Internal\fsVersionedType.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Internal\fsVersionManager.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Reflection\fsMetaProperty.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Reflection\fsMetaType.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Reflection\fsReflectionUtility.cs" />
+    <Compile Include="tajTemp\third-party\FullSerializer\Source\Reflection\fsTypeLookup.cs" />
+    <Compile Include="tajTemp\third-party\MiniJSON\MiniJSON.cs" />
+    <Compile Include="tajTemp\utilities\AudioClipUtil.cs" />
+    <Compile Include="tajTemp\utilities\Config.cs" />
+    <Compile Include="tajTemp\utilities\Constants.cs" />
+    <Compile Include="tajTemp\utilities\Credentials.cs" />
+    <Compile Include="tajTemp\utilities\DataCache.cs" />
+    <Compile Include="tajTemp\utilities\EventManager.cs" />
+    <Compile Include="tajTemp\utilities\KeyEventManager.cs" />
+    <Compile Include="tajTemp\utilities\Runnable.cs" />
+    <Compile Include="tajTemp\utilities\Singleton.cs" />
+    <Compile Include="tajTemp\utilities\Utility.cs" />
+    <Compile Include="tajTemp\utilities\WatsonException.cs" />
+    <Compile Include="tajTemp\utilities\WaveFile.cs" />
+    <Compile Include="ToneAnalyzer\DataModels.cs" />
+    <Compile Include="ToneAnalyzer\ToneAnalyzer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tajTemp\third-party\HtmlAgilityPack\HtmlAgilityPack.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
